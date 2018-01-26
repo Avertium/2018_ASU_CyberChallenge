@@ -14,7 +14,7 @@ As you have completed the first challenge simply by loging in, there should be a
 **Difficulty**: Easy  
 <details>
   <summary><strong>Flag</strong></summary>
-	  746217
+	  W3lcom3ToTh3Jungl3.
 </details>
 <details>
   <summary><strong>Hint</strong></summary>
@@ -27,3 +27,33 @@ unix_screenshot.png
 </details>
 
 ----------
+
+## 02_Moving_In - 200 Points  
+**Objective**: Add a rsa key for ssh authentication to your team server to make logging in more secure and convenient.  
+**Difficulty**: Medium  
+<details>
+  <summary><strong>Flag</strong></summary>
+	  LookM4NoP455WoRD5!
+</details>
+<details>
+  <summary><strong>Hint</strong></summary>
+	  Try this: <strong>man ssh-keygen</strong>
+</details>
+
+----------
+
+## 03_Making_It_Your_Own - 300 Points  
+**Objective**: Once logged into your server, by editing your bashrc, add a custom message that gets displayed on login for your user that reads:  
+
+<strong>Welcome back! It is [date]</strong>  
+			
+Where <u>[date]</u> is the current system time and date. Your bashrc gets executed every time your user logs in. Using this file you can customize your shell, execute tasks on login, or add things like environment variables to your session.  
+**Difficulty**: Medium  
+<details>
+  <summary><strong>Flag</strong></summary>
+	  Wh4t4w4rmW3lcom3?
+</details>
+<details>
+  <summary><strong>Hint</strong></summary>
+	  The system date and time can be found by using the command <strong>date</strong>
+</details>
