@@ -1,4 +1,4 @@
-# 2018_ASU_CyberChallenge  
+# 2018 ASU CyberChallenge  
 Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='https://www.tvrms.com'>Terra Verde</a>
 
 <a target='_blank' href='https://publicservice.asu.edu/content/cybersecurity-student-challenge'>PR Release</a>
@@ -33,7 +33,7 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 - Scoreboard for scoring the challenge
 ### Salt SSH (<a href='https://docs.saltstack.com/en/latest/topics/ssh/'>Salt Site</a>)
 - Server management tool for pushing one to many commands
-#### DinoPass (<a href='http://www.dinopass.com/'>DinoPass Site</a>)
+### DinoPass (<a href='http://www.dinopass.com/'>DinoPass Site</a>)
 - Random Password Generator
 
 
