@@ -51,6 +51,6 @@ Analyze this pcap we captured here: (pcapchallenge2.pcap)
   SUNDVL623 
 </details>
 <details>
-  <summary><strong>4. What was the ID number of the badge that Anne told her secret lover to bring?</strong></summary>
+  <summary><strong>4. What is the name of the attachment Ann sent to her secret lover including the file extension?</strong></summary>
   secretrendezvous.docx
 </details>
