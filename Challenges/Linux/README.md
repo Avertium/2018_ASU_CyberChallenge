@@ -57,3 +57,83 @@ Where <u>[date]</u> is the current system time and date. Your bashrc gets execut
   <summary><strong>Hint</strong></summary>
 	  The system date and time can be found by using the command <strong>date</strong>
 </details>
+
+----------
+
+## 04_Finding_Your_Way - 200 Points  
+**Objective**: There is a file somewhere on the system with the name waldo, your job is to find waldo in the filesystem and then add the following text to the file:
+
+<strong>"Found waldo!"</strong>  
+**Difficulty**: Medium  
+<details>
+  <summary><strong>Flag</strong></summary>
+	  ?NowWh3r3I5C4rm3n?
+</details>
+<details>
+  <summary><strong>Hint</strong></summary>
+	  seek and you shall <strong>find</strong>
+</details>
+
+----------
+
+## 05_Time_To_Explore - 200 Points  
+**Objective**: There is a process listening on 127.0.0.1 on a port higher than 7000 and lower than 10000, find the listening port and then connect to it and say:
+		
+<strong>HELLO</strong>  
+**Difficulty**: Medium  
+<details>
+  <summary><strong>Flag</strong></summary>
+	  H3r3545tick3r4U?
+</details>
+<details>
+  <summary><strong>Hint</strong></summary>
+	  run <strong>man netstat</strong>
+</details>
+<details>
+  <summary><strong>Hint2</strong></summary>
+	  look for the <i>'swiss army knife of networking'</i>
+</details>
+
+----------
+
+## 06_Lucky_Number - 300 Points  
+**Objective**: The service is thinking of a number between 1 and 1000, connect to it and send it your guess, if you're right the flag is yours! 
+**Difficulty**: Medium  
+<details>
+  <summary><strong>Flag</strong></summary>
+	  YouGu355edIt!1!11!
+</details>
+<details>
+  <summary><strong>Hint</strong></summary>
+	  Bash script something that could try <strong>for</strong> each number in the <strong>seq</strong>uence of 1 – 1000 on your behalf.
+</details>
+
+----------
+
+## 07_Not_For_You_To_Know - 500 Points  
+**Objective**: User admin has a flag.txt inside <strong>secret_docs</strong> in their in their home directory, find a permissions issue on the system that will allow you to read it from their home directory!
+**Difficulty**: Hard  
+<details>
+  <summary><strong>Flag</strong></summary>
+	  Th3y'llN3v3rF1ndTh3LoopHol3
+</details>
+<details>
+  <summary><strong>Hint</strong></summary>
+	  Only admin can read the files in secret docs, can you find a way to pretend to be admin?
+</details>
+
+----------
+
+## 08_Im_Not_Who_I_Say_I_Am - 500 Points  
+**Objective**: <strong>admin</strong> has written a clever little binary in c that can list the contents of a directory by running some commands on their behalf. 
+
+Find the program and find a way to use it to instead become admin and then create a file named <strong>flag8.txt</strong> in <strong>/home/admin/secret_docs/</strong>  
+**Difficulty**: Hard  
+<details>
+  <summary><strong>Flag</strong></summary>
+	  Not5oCl3v3r4r3W3?
+</details>
+<details>
+  <summary><strong>Hint</strong></summary>
+	  Consider your <strong>ENV</strong>ironment
+</details>
