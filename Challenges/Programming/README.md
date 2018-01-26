@@ -12,7 +12,7 @@ Flag:<details>
 ----------
 
 ## 02_Being_Different_Cant_Hurt - 300 Points  
-Objective: **Undefined**  
+Objective: **Attached is a file containing many characters, The flag that you want will be found by counting the number of occurrences of each character and then sorting them by the least number of occurrences to the most. The flag will be the first 14 most unique characters.**  
 Difficulty: **Medium**  
 Flag:<details>
   <summary>Spoilers</summary>
