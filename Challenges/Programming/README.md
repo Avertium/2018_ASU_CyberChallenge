@@ -22,7 +22,7 @@ Flag:<details>
 ----------
 
 ## 03_Regex - 400 Points  
-Objective: **Find the flag in the block of garbled text (medium_regex.txt) using regex with these parameters: Two lower case word characters. Two upper case word characters. Either one of the following characters '!', '?', ''. One non-word character. Between 2 and 3 lowercase word characters. Two or more uppercase word characters. A number between 100 and 199. Two of the same non-word characters (Ex **, but not ^). A number between 7000 and 9999**  
+Objective: **Find the flag in the block of garbled text (medium_regex.txt) using regex with these parameters: Two lower case word characters. Two upper case word characters. Either one of the following characters '!', '?', ''. One non-word character. Between 2 and 3 lowercase word characters. Two or more uppercase word characters. A number between 100 and 199. Two of the same non-word characters (Ex \*\*, but not ^). A number between 7000 and 9999**  
 Difficulty: **Medium**  
 Flag:<details>
   <summary>Spoilers</summary>
