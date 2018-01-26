@@ -13,16 +13,16 @@ Once logged in type <strong>ls</strong>, this will list the contents of the curr
 As you have completed the first challenge simply by loging in, there should be a file already in your directory called flags.txt. When you complete a challenge, a new flag should appear within the flags.txt file within 60 seconds of completion. **  
 **Difficulty**: Easy  
 <details>
-  <summary>**Flag**</summary>
+  <summary><strong>Flag</strong></summary>
 	  746217
 </details>
 <details>
-  <summary>**Hint**</summary>
+  <summary><strong>Hint</strong></summary>
 	  Here's a free hint for your first challenge. <i>(Everybody gets one)</i>
 
-Windows Users:  
+**Windows Users:**  
 putty_screenshot.png  
-Mac/Linux Users:  
+**Mac/Linux Users:**  
 unix_screenshot.png  
 </details>
 
