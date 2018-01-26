@@ -17,7 +17,7 @@ Objective: **Add all of the numbers in the text file (easy_add_numbers.txt). The
 
 ## 02_Being_Different_Cant_Hurt - 300 Points  
 Difficulty: **Medium**  
-Objective: **Attached is a file (medium_count_letters.txt) containing many characters, The flag that you want will be found by counting the number of occurrences of each character and then sorting them by the least number of occurrences to the most. The flag will be the first 14 most unique characters.**  
+Objective: **Attached is a file (medium_count_letters.txt) containing many characters, Find the 14 least common characters in the text file.  Order the characters by least common to most common to determine the flag**  
 <details>
   <summary><strong>Flag</strong></summary>
   1sthi5re@lLyf3
