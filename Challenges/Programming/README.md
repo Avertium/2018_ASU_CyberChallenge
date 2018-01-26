@@ -2,8 +2,8 @@
 # Programming Challenges
 
 ## 01_It_All_Adds_Up - 150 Points  
-Objective: **Add all of the numbers in the text file (easy_add_numbers.txt). The sum of the numbers is the flag.**  
 Difficulty: **Easy**  
+Objective: **Add all of the numbers in the text file (easy_add_numbers.txt). The sum of the numbers is the flag.**  
 Flag:<details>
   <summary>Spoilers</summary>
 	  746217
@@ -12,8 +12,8 @@ Flag:<details>
 ----------
 
 ## 02_Being_Different_Cant_Hurt - 300 Points  
-Objective: **Attached is a file (medium_count_letters.txt) containing many characters, The flag that you want will be found by counting the number of occurrences of each character and then sorting them by the least number of occurrences to the most. The flag will be the first 14 most unique characters.**  
 Difficulty: **Medium**  
+Objective: **Attached is a file (medium_count_letters.txt) containing many characters, The flag that you want will be found by counting the number of occurrences of each character and then sorting them by the least number of occurrences to the most. The flag will be the first 14 most unique characters.**  
 Flag:<details>
   <summary>Spoilers</summary>
   1sthi5re@lLyf3
@@ -22,8 +22,8 @@ Flag:<details>
 ----------
 
 ## 03_Regex - 400 Points  
-Objective: **Find the flag in the block of garbled text (medium_regex.txt) using regex with these parameters: Two lower case word characters. Two upper case word characters. Either one of the following characters '!', '?', ''. One non-word character. Between 2 and 3 lowercase word characters. Two or more uppercase word characters. A number between 100 and 199. Two of the same non-word characters (Ex \*\*, but not ^). A number between 7000 and 9999**  
 Difficulty: **Medium**  
+Objective: **Find the flag in the block of garbled text (medium_regex.txt) using regex with these parameters: Two lower case word characters. Two upper case word characters. Either one of the following characters '!', '?', ''. One non-word character. Between 2 and 3 lowercase word characters. Two or more uppercase word characters. A number between 100 and 199. Two of the same non-word characters (Ex \*\*, but not ^). A number between 7000 and 9999**  
 Flag:<details>
   <summary>Spoilers</summary>
   khNV!#ksAQ102))9987
