@@ -15,6 +15,7 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 - **Stephen Weldon** - Cryptography Challenges
 - **Brian Saenz** - Misc Challenges
 - **Ron Egli** - Setup Scripting / Scoreboard / GitHub
+- **Michael L, Jacob G, Stephen H, Stephen W, Shaun F, Reece V** - Challenge Helpers
 
 ## Technologies Used  
 ### Ubuntu 16.04 LTS (<a href='https://www.ubuntu.com/'>Ubuntu Site</a>)
