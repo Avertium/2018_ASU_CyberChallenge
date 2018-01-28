@@ -4,7 +4,7 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 <a target='_blank' href='https://publicservice.asu.edu/content/cybersecurity-student-challenge'>PR Release</a>
 
 ## Winning Teams
-- First : Coming soon
+- First : Skin (info coming soon)
 - Second : Coming soon
 - Third : Coming soon
 
@@ -15,7 +15,7 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 - **Stephen Weldon** - Cryptography Challenges
 - **Brian Saenz** - Misc Challenges
 - **Ron Egli** - Setup Scripting / Scoreboard / GitHub
-- **Michael L, Jacob G, Stephen H, Stephen W, Shaun F, Reece V** - Challenge Helpers
+- **Michael L, Jacob G, Stephen H, Stephen W, Shaun F, Reece V, Carlos V, Bob F** - Challenge Helpers
 
 ## Technologies Used  
 ### Ubuntu 16.04 LTS (<a href='https://www.ubuntu.com/'>Ubuntu Site</a>)
