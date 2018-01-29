@@ -71,7 +71,7 @@ What's the password?
 
 ## 06_Reverse - 500 Points  
 **Difficulty**: Hard  
-**Objective**: Review <strong>~/binary/reverse1</strong>
+**Objective**: Review <strong>~/binary/reverse3</strong>
 
 What's the password?    
 <details>
