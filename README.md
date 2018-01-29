@@ -3,10 +3,33 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 
 <a target='_blank' href='https://publicservice.asu.edu/content/cybersecurity-student-challenge'>PR Release</a>
 
-## Winning Teams
-- First : Skin (info coming soon)
-- Second : Coming soon
-- Third : Coming soon
+## Participating Teams (In ranking order)
+- 1	- **Skin**	7200
+- 2	- **Toad-In-Waiting**	5280
+- 3	- **The Ethics Committee**	4950
+- 4	- Wizard	4770
+- 5	- Joe_Billy	4450
+- 6	- Salvo	4450
+- 7	- The_Angel	4200
+- 8	- Cyber Toenails	3600
+- 9	- BruteForce	3550
+- 10	- Legion	3540
+- 11	- Bryan? Huh...	2900
+- 12	- Cyberchase	2450
+- 13	- Sons of the Patriots	2320
+- 14	- G-Rex	2310
+- 15	- Peregrine	2200
+- 16	- Romo Bros	1780
+- 17	- This is Our Team	1500
+- 18	- Tefral_the_Surveyor	1500
+- 19	- team penut	1350
+- 20	- Captain_Savage	1200
+- 21	- Monosodium Glutamate	1150
+- 22	- Hardcore	1100
+- 23	- Korg	1050
+- 24	- MET	840
+- 25	- Jumbo_Carnation	760
+- 26	- Anti-Venom	410
 
 ## Cyber Challenge Team
 - **Gavin Stroy** - Challenge Leader / Binary Challenges / Speaker
