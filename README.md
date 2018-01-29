@@ -3,6 +3,8 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 
 <a target='_blank' href='https://publicservice.asu.edu/content/cybersecurity-student-challenge'>PR Release</a>
 
+![alt text](./Setup/images/EndingScoreView.PNG)
+
 ## Participating Teams (In ranking order)
 - 1	- **Skin**	7200
 - 2	- **Toad-In-Waiting**	5280
