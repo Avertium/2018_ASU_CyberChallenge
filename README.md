@@ -3,6 +3,8 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 
 <a target='_blank' href='https://publicservice.asu.edu/content/cybersecurity-student-challenge'>PR Release</a>
 
+<a target='_blank' href='http://www.12news.com/video/news/local/valley/asu-students-participate-in-hack-a-thon-train-for-cyber-attacks/75-2896950'>Local News Coverage</a>
+
 ![alt text](./Setup/images/EndingScoreView.PNG)
 
 ## Participating Teams (In ranking order)
