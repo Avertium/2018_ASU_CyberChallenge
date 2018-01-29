@@ -10,11 +10,11 @@ Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='http
 
 ## Cyber Challenge Team
 - **Gavin Stroy** - Challenge Leader / Binary Challenges / Speaker
-- **Holden Kilbride** - Network / Infrastructure / Programming Challenges
-- **Daniel Giebink** - Setup Scripting / Linux Challenges
+- **<a href='https://github.com/holdenkilbride'>Holden Kilbride</a>** - Network / Infrastructure / Programming Challenges
+- **<a href='https://github.com/dgeebs'>Daniel Giebink</a>** - Setup Scripting / Linux Challenges
 - **Stephen Weldon** - Cryptography Challenges
 - **Brian Saenz** - Misc Challenges
-- **Ron Egli** - Setup Scripting / Scoreboard / GitHub
+- **<a href='https://github.com/SmugZombie'>Ron Egli</a>** - Setup Scripting / Scoreboard / GitHub
 - **Michael L, Jacob G, Stephen H, Stephen W, Shaun F, Reece V, Carlos V, Bob F** - Challenge Helpers
 
 ## Technologies Used  
