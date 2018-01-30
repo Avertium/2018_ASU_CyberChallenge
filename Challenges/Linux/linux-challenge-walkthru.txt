@@ -1,0 +1,110 @@
+Easy:
+	Logon and Authentication:
+	 
+		Flag1: Login via SSH
+			Login to your specified team server via SSH. If you're on a mac or linux machine, you can do this by opening up a terminal and using the ssh command.
+			If you are on a windows machine, you can use a tool like putty available at the link below.
+			Once logged in type ls, this will list the contents of the current directory you are in. If you'd like to see which directory you are currently in, your current working directory, type pwd. To change the directory you are in use the command cd to change your directory. Below is a list of common system navigation commands that can be used to roam the system.
+			ls – list the contents of a directory
+			pwd – print working directory; shows you the current directory you are in on the system
+			cd – change directory; changes your current working directory; 
+				cd .. - goes back one directory
+				cd  ~ - goes to your home directory (/home/<your_username>/)
+				cd /<specified>/<path>/ - changes your directory to the specified path
+			cat – prints out the content of a file to the terminal
+			man – manual; can be used to find the documentation and instructions for most system commands. i.e. man cd will give you the documentation on how to use the cd command
+			less – allows you to read the contents of the file while scrolling through with the arrow keys; type q to quit.
+			nano – one of the easiest to use text editors available on the system. Use this to open files for editing by typing nano followed by the filename. Use control+x to exit.
+			There should be a file already in your directory called flags.txt. When you complete a challenge, a new flag should appear within the flags.txt file within 60 seconds of completion. 
+			If you'd like to keep an eye on your flags file for when flags appear, you can keep an SSH session open while running the command tail –f flags.txt which will continuously watch for new flags to be appended to the file.
+			Answer: Flag is already in the users home directory 
+			/home/ubuntu/flags.txt
+			
+		Flag2: Add an SSH key
+			Q: Add a rsa key for ssh authentication to your team server to make logging in more secure and convenient.
+			
+			Hint: man ssh-keygen
+			 
+			Answer: use ssh-keygen to make an rsa key pair and add it to authorized_keys
+			ssh-keygen –t rsa –f mykey
+			mkdir .ssh
+			cp mykey.pub ~/.ssh/authorized_keys
+			
+		Flag3: Add a custom login banner
+			Q: Once logged into your server, by editing your bashrc, add a custom message that gets displayed on login for your user that reads:
+			
+			Welcome back! It is <date>
+			
+			Where <date> is the current system time and date. Your bashrc gets executed every time your user logs in. Using this file you can customize your shell, execute tasks on login, or add things like environment variables to your session. 
+			
+			Hint: bashrc is located at ~/.bashrc
+			Hint: the system date and time can be found by using the command date
+			
+			Answer: edit .bashrc which is executed every time your user is logged in to add a print or echo statement that says "Welcome back! It is $(date)\n"
+			
+			editor ~/.bashrc
+			
+			Add: (printf | echo) "Welcome back! It is $(date)\n"
+			                                 - or -
+			         (printf | echo) "Welcome back! It is `date`\n"
+			
+		Flag4: Find a file
+		
+			Q: There is a file somewhere on the system with the name waldo, your job is to find waldo in the filesystem and then add the following text to the file:
+			"Found waldo!"
+		
+			Hint: seek and you shall find
+		
+			Answer: use the find utility to find the file named waldo
+			
+			find / –name waldo
+		
+Medium
+	System Exploration
+		Flag5: There is a process listening on 127.0.0.1 on a port higher than 7000 and lower than 10000, find the listening port and then connect to it and say:
+		
+		HELLO 
+		
+		Hint: run man netstat 
+		Hint: look for the 'swiss army knife of networking'
+		
+		Answer: Use netstat to look at the currently listening ports on the system and find myservice listening on port 9988. 
+		netstat –l
+		
+		Then connect to the service using a tool like netcat to connect to the port and send the string HELLO
+		nc 127.0.0.1 9988
+		HELLO
+		
+		Flag6: The service is thinking of a number between 1 and 1000, connect to it and send it your guess, if you're right the flag is yours!
+		
+		Hint: Bash script something that could try for each number in the sequence of 1 – 1000 on your behalf.
+		
+		Answer: users can create a bash script or language of choice using utils on the box with a for loop to try to connect to the service and try each number in sequence until they get the flag.
+		
+		The most basic option:
+		
+		#!/bin/bash
+		
+		for number in $(seq 1 1000); do
+		    echo $number | nc 127.0.0.1 9988
+		done
+		
+Hard
+	User Permissions
+		
+		Flag7: User admin has a flag.txt inside secret_docs in their in their home directory, find a permissions issue on the system that will allow you to read it from thier home directory!
+		
+		Hint: Only admin can read the files in secret docs, can you find a way to pretend to be admin?
+		
+		Answer: a copy of less has been renamed and placed on the system and is owned by admin with the suid bit set. This means that finding the ted binary and using it against the flag file in admin's directory will allow you to read the flag file in his directory as admin.
+		
+		Find files with the SUID bit set that allow execution globally, outputting stderror to /dev/null will make the search easier to read the results. 
+		find / –t file –perm –4001 2>/dev/null
+		
+		Looking at ted, you'll find that ted is owned by the user and group admin, allows execution by anyone and has the suid bit set. This means when ted is run it runs with the permissions of admin. This will allow the executing user to be able to access resources as another user.
+		
+		We then can execute ted to find out it is a text editor and use the application to 
+		cd /usr/share/scripts/admin/testing/editors/
+		./ted /home/admin/secret_docs/foradmineyesonly.txt
+		
+Flag8: admin has written a clever little binary in c that can list the contents of a directory by running some commands on their behalf. Find the program and find a way to use it to instead become admin and then create a file named flag9.txt in /home/admin/secret_docs/ after this is done, the flag will appear in /home/ubuntu/flags.txt
