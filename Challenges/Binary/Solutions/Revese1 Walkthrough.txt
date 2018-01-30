@@ -1,0 +1,24 @@
+04_Sea_Of_Text Walkthrough
+
+Play with the application at least once before trying to reverse it. When ran, the program asks for a password. If the incorrect password is entered, it prints "Fail!" and exits. In software, there are multiple ways to compare user input to a value (e.g. the correct password). The easiest is to have a line like this:
+
+if (user_input == 'password'){
+  win()
+}
+
+If the code is written this way, then the actual password string will be stored in the program. The utility, 'strings', is used for reading all strings within a program or file. 
+
+$ strings ./reverse1 | less
+
+In the 'less' terminal, search for the prompt "Enter the Password" or response "Fail" to find strings around that same area.
+
+:/Fail
+
+Enter the Password:
+Str1ngsAr3Fr13nds
+Pass! The password is the flag.
+Fail!
+
+Enter the password: Str1ngsAr3Fr13nds
+
+Pass! The password is the flag.

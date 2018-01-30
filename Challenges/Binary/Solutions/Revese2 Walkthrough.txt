@@ -1,0 +1,54 @@
+05_Bug_Spray Walkthrough
+
+This is an advanced challenge, and requires the use of a debugger. First, run the program to get an idea of what it's doing. This program operates exactly the same as reverse1, however, 'strings' will not work here. If using 'strings' does not work, the next best thing is to open the program in a debugger and try to get an idea of the program logic.
+
+$ gdb ./reverse2 -q
+(gdb) disassemble main
+Dump of assembler code for function main:
+   0x00401283 <+0>:     push   %ebp
+   0x00401284 <+1>:     mov    %esp,%ebp
+   0x00401286 <+3>:     and    $0xfffffff0,%esp
+   0x00401289 <+6>:     sub    $0x30,%esp
+   0x0040128c <+9>:     call   0x401334 <__main>
+   0x00401291 <+14>:    movl   $0x403060,(%esp)
+   0x00401298 <+21>:    call   0x401354 <printf>
+   0x0040129d <+26>:    call   0x40132c <__getreent>
+   0x004012a2 <+31>:    mov    0x4(%eax),%eax
+   0x004012a5 <+34>:    mov    %eax,0x8(%esp)
+   0x004012a9 <+38>:    movl   $0x1d,0x4(%esp)
+   0x004012b1 <+46>:    lea    0x18(%esp),%eax
+   0x004012b5 <+50>:    mov    %eax,(%esp)
+   0x004012b8 <+53>:    call   0x40133c <fgets>
+   0x004012bd <+58>:    movl   $0x403071,0x4(%esp)
+   0x004012c5 <+66>:    lea    0x18(%esp),%eax
+   0x004012c9 <+70>:    mov    %eax,(%esp)
+   0x004012cc <+73>:    call   0x40136c <strcspn>
+   0x004012d1 <+78>:    movb   $0x0,0x18(%esp,%eax,1)
+   0x004012d6 <+83>:    call   0x4011d0 <genPass>
+   0x004012db <+88>:    mov    %eax,0x2c(%esp)
+   0x004012df <+92>:    mov    0x2c(%esp),%eax
+   0x004012e3 <+96>:    mov    %eax,0x4(%esp)
+   0x004012e7 <+100>:   lea    0x18(%esp),%eax
+   0x004012eb <+104>:   mov    %eax,(%esp)
+   0x004012ee <+107>:   call   0x401364 <strcmp>
+
+Without going into too much detail, instruction <+53> calls fgets() (the function to collect user input), and instruction <+70> moves the result ($eax) onto the stack ($esp). Then, instruction <+83> calls getPass() to generate the password. Instructions <+100>, <+104>, and <+107> are used to compare strings.
+
+Again without going into too much detail, we can pause the code anywhere after genPass() and see what our input is being compared against. The easiest way is to break right after getPass() since the result of functions are always stored in $eax.
+
+(gdb) break *main+88
+Breakpoint 1 at 0x4012db
+(gdb) run
+Enter Password: asdf
+
+Breakpoint 1, 0x004012db in main ()
+(gdb) x/s $eax
+0x200392b8:     "Inv1s1bl3P@ssw0rd"
+(gdb) quit
+$ ./reverse2
+Enter Password: Inv1s1bl3P@ssw0rd
+Pass! The password is the flag.
+
+
+(To learn more about GDB, checkout the GDB cheat sheet)
+<http://darkdust.net/files/GDB%20Cheat%20Sheet.pdf>

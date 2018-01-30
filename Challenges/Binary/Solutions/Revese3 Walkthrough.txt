@@ -1,0 +1,95 @@
+06_Reverse Walkthrough
+
+This is an advanced challenge, and requires the use of a debugger. First, run the program to get an idea of what it's doing. This program operates exactly the same as reverse1 and reverse2. Like reverse2, if using 'strings' does not work, the next best thing is to open the program in a debugger and try to get an idea of the program logic.
+
+$gdb ./reverse3 -q
+(gdb) disassemble main
+[output omitted]
+
+   0x00401231 <+97>:    call   0x4012fc <strcspn>
+   0x00401236 <+102>:   movb   $0x0,0x18(%esp,%eax,1)
+   0x0040123b <+107>:   cmpl   $0xb,0x2c(%esp)
+   0x00401240 <+112>:   jne    0x4012b8 <main+232>
+---Type <return> to continue, or q <return> to quit--
+   0x00401242 <+114>:   movzbl 0x22(%esp),%eax
+   0x00401247 <+119>:   cmp    $0x65,%al
+   0x00401249 <+121>:   jne    0x4012b8 <main+232>
+   0x0040124b <+123>:   movzbl 0x21(%esp),%eax
+   0x00401250 <+128>:   cmp    $0x72,%al
+   0x00401252 <+130>:   jne    0x4012b8 <main+232>
+   0x00401254 <+132>:   movzbl 0x20(%esp),%eax
+   0x00401259 <+137>:   cmp    $0x75,%al
+   0x0040125b <+139>:   jne    0x4012b8 <main+232>
+   0x0040125d <+141>:   movzbl 0x1f(%esp),%eax
+   0x00401262 <+146>:   cmp    $0x63,%al
+   0x00401264 <+148>:   jne    0x4012b8 <main+232>
+   0x00401266 <+150>:   movzbl 0x1e(%esp),%eax
+   0x0040126b <+155>:   cmp    $0x65,%al
+   0x0040126d <+157>:   jne    0x4012b8 <main+232>
+   0x0040126f <+159>:   movzbl 0x1d(%esp),%eax
+   0x00401274 <+164>:   cmp    $0x73,%al
+   0x00401276 <+166>:   jne    0x4012b8 <main+232>
+   0x00401278 <+168>:   movzbl 0x1c(%esp),%eax
+   0x0040127d <+173>:   cmp    $0x72,%al
+   0x0040127f <+175>:   jne    0x4012b8 <main+232>
+   0x00401281 <+177>:   movzbl 0x1b(%esp),%eax
+   0x00401286 <+182>:   cmp    $0x65,%al
+   0x00401288 <+184>:   jne    0x4012b8 <main+232>
+   0x0040128a <+186>:   movzbl 0x1a(%esp),%eax
+   0x0040128f <+191>:   cmp    $0x70,%al
+   0x00401291 <+193>:   jne    0x4012b8 <main+232>
+---Type <return> to continue, or q <return> to quit--
+   0x00401293 <+195>:   movzbl 0x19(%esp),%eax
+   0x00401298 <+200>:   cmp    $0x75,%al
+   0x0040129a <+202>:   jne    0x4012b8 <main+232>
+   0x0040129c <+204>:   movzbl 0x18(%esp),%eax
+   0x004012a1 <+209>:   cmp    $0x73,%al
+   0x004012a3 <+211>:   jne    0x4012b8 <main+232>
+   0x004012a5 <+213>:   movl   $0x403074,(%esp)
+   0x004012ac <+220>:   call   0x4012f4 <puts>
+
+[output omitted]
+
+Without going into too much detail, this requires reading assembly instructions. 
+
+   0x00401236 <+102>:   movb   $0x0,0x18(%esp,%eax,1)
+   0x0040123b <+107>:   cmpl   $0xb,0x2c(%esp)
+   0x00401240 <+112>:   jne    0x4012b8 <main+232>
+
+These instructions test the length of the input. If it is not exactly 0xb (11) characters, it exits.
+
+   0x00401242 <+114>:   movzbl 0x22(%esp),%eax
+   0x00401247 <+119>:   cmp    $0x65,%al
+   0x00401249 <+121>:   jne    0x4012b8 <main+232>
+
+Instructions like these are repeated throughout after the length check. This tests the last character of the input. If it's not 0x65 ('e') then it exits.
+
+   0x0040124b <+123>:   movzbl 0x21(%esp),%eax
+   0x00401250 <+128>:   cmp    $0x72,%al
+   0x00401252 <+130>:   jne    0x4012b8 <main+232>
+
+Likewise, this tests the second to last character. If it's not 0x72 ('r'), it exits. Putting it all together, and looking at the pattern we can find the following characters going from last to first in the expected input.
+
+   0x00401247 <+119>:   cmp    $0x65,%al
+   0x00401250 <+128>:   cmp    $0x72,%al
+   0x00401259 <+137>:   cmp    $0x75,%al
+   0x00401262 <+146>:   cmp    $0x63,%al
+   0x0040126b <+155>:   cmp    $0x65,%al
+   0x00401274 <+164>:   cmp    $0x73,%al
+   0x0040127d <+173>:   cmp    $0x72,%al
+   0x0040127d <+173>:   cmp    $0x72,%al
+   0x00401286 <+182>:   cmp    $0x65,%al
+   0x0040128f <+191>:   cmp    $0x70,%al
+   0x00401298 <+200>:   cmp    $0x75,%al
+   0x004012a1 <+209>:   cmp    $0x73,%al
+
+Reconstructed, this translates to the string 'supersecure'.
+
+$ ./reverse3
+Enter Password: supersecure
+Pass! The password is the flag.
+
+
+
+(To learn more about GDB, checkout the GDB cheat sheet)
+<http://darkdust.net/files/GDB%20Cheat%20Sheet.pdf>
