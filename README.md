@@ -1,7 +1,7 @@
 # 2018 ASU CyberChallenge  
 Problems and Solutions to the 2018 ASU Cyber Challenge Provided by <a href='https://www.tvrms.com'>Terra Verde</a>
 
-<a target='_blank' href='https://publicservice.asu.edu/content/cybersecurity-student-challenge'>PR Release</a>
+<a target='_blank' href='https://www.terraverdeservices.com/terra-verde/terra-verde-and-arizona-state-university-west-campus-hosted-cyber-challenge/'>PR Release</a>
 
 <a target='_blank' href='http://www.12news.com/video/news/local/valley/asu-students-participate-in-hack-a-thon-train-for-cyber-attacks/75-2896950'>Local News Coverage</a>
 
